@@ -10,25 +10,25 @@ public class Rectangle {
         int x2 = input.nextInt();
         int y2 = input.nextInt();
 
-        int xx2 = 0;
+        int sideX1X2 = 0;
         if (x > x2) {
-            xx2 = x - x2;
+            sideX1X2 = x - x2;
         } else if (x2 > x) {
-            xx2 = x2 - x;
+            sideX1X2 = x2 - x;
         }
 
-        int yy2 = 0;
+        int sideY1Y2 = 0;
         if (y > y2) {
-            yy2 = y - y2;
+            sideY1Y2 = y - y2;
         } else if (y2 > y) {
-            yy2 = y2 - y;
+            sideY1Y2 = y2 - y;
         }
 
-        if (xx2 == yy2) {
+        if (sideX1X2 == sideY1Y2) {
             System.out.println("Прямоугольник является квадратом");
-        } else if (xx2 > yy2) {
+        } else if (sideX1X2 > sideY1Y2) {
             System.out.println("Прямоугольник находится в альбомной ориентации");
-        } else if (yy2 > xx2) {
+        } else if (sideY1Y2 > sideX1X2) {
             System.out.println("Прямоугольник находится в книжной ориентации");
         }
     }
